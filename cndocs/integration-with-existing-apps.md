@@ -395,9 +395,10 @@ You can add a new link on the main game menu to go to the "High Score" React Nat
 
 ##### 2. 事件处理
 
-We will now add an event handler from the menu link. A method will be added to the main `ViewController` of your application. This is where `RCTRootView` comes into play.
+我们现在将从菜单链接添加一个事件处理程序。一个方法将添加到您的应用程序的主`ViewController`。这就是`RCTRootView`发挥作用的地方。
 
-When you build a React Native application, you use the React Native packager to create an `index.bundle` that will be served by the React Native server. Inside `index.bundle` will be our `RNHighScore` module. So, we need to point our `RCTRootView` to the location of the `index.bundle` resource (via `NSURL`) and tie it to the module.
+构建React Native应用程序时，可以使用React Native packager创建一个由React Native服务器提供的`index.bundle`。在`index.bundle`里面将是我们的`RNHighScore`模块。
+因此，我们需要将`RCTRootView`指向`index.bundle`资源的位置（通过`NSURL`）并将其绑定到模块。
 
 We will, for debugging purposes, log that the event handler was invoked. Then, we will create a string with the location of our React Native code that exists inside the `index.bundle`. Finally, we will create the main `RCTRootView`. Notice how we provide `RNHighScores` as the `moduleName` that we created [above](#the-react-native-component) when writing the code for our React Native component.
 
